@@ -42,7 +42,16 @@
         </style>
         <script type="text/javascript">
         
+              
+                
                 var diceSetting = 6;
+                
+                function setDice(a){
+                    diceSetting = a;
+                    currentNumber = document.getElementById("Dice");
+                    currentNumber.innerHTML = diceSetting;
+                    return diceSetting;
+                }
         
                 function RandomNumber(numberSetting) {
                     randomNumber = Math.floor((Math.random() * numberSetting) + 1);
@@ -60,16 +69,16 @@
     <body>
         <nav id="SelectDice">
             <ul>
-                <li><a href="#" onclick="diceSetting = 6;">6</a></li>
-                <li><a href="#" onclick="diceSetting = 10;">10</a></li>
-                <li><a href="#" onclick="diceSetting = 20;">20</a></li>
-                <li><a href="#" onclick="diceSetting = 100;">100</a></li>    
+                <li><a href="#" onclick="setDice(6)">6</a></li>
+                <li><a href="#" onclick="setDice(10)">10</a></li>
+                <li><a href="#" onclick="setDice(20)">20</a></li>
+                <li><a href="#" onclick="setDice(100)">100</a></li>    
             </ul>
         </nav>
         <section id="DiceHistory">
         </section>
         <section id="Main">
-                <button type="button" autofocus="autofocus" onclick="RandomNumber(diceSetting)" id="Dice">1</button>
+                <button type="button" autofocus="autofocus" onclick="RandomNumber(diceSetting)" id="Dice">6</button>
         </section>
     </body>
 </html>
