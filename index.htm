@@ -45,6 +45,8 @@
               
                 
                 var diceSetting = 6;
+                // Create Array to store Dice History
+                var diceLog = [6];
                 
                 function setDice(a){
                     diceSetting = a;
@@ -54,9 +56,23 @@
                 }
         
                 function RandomNumber(numberSetting) {
+                    // Make a random number (dice)
                     randomNumber = Math.floor((Math.random() * numberSetting) + 1);
+                    // Add Dice to array
+                    var addDice = diceLog.unshift(randomNumber);
+                    
+                   
+                    
+                    for (var i = 0; i < 5; i++){
+                       alert(diceLog[i])
+                        
+                        console.log('Is This thing on?')
+                    }
+                    
                     console.log(randomNumber);
                     currentNumber = document.getElementById("Dice");
+                    
+                    
                     
                     
                     currentNumber.innerHTML = randomNumber;
