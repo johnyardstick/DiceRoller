@@ -59,7 +59,7 @@
                     // Make a random number (dice)
                     randomNumber = Math.floor((Math.random() * numberSetting) + 1);
                     // Add Dice to array
-                    var addDice = diceLog.push(randomNumber);
+                    var addDice = diceLog.unshift(randomNumber);
                     var diceHistory = document.getElementById('DiceHistory');
                     // Reset dice history
                     diceHistory.innerHTML = '';
