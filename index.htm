@@ -59,12 +59,14 @@
                     // Make a random number (dice)
                     randomNumber = Math.floor((Math.random() * numberSetting) + 1);
                     // Add Dice to array
-                    var addDice = diceLog.unshift(randomNumber);
+                    var addDice = diceLog.push(randomNumber);
                     var diceHistory = document.getElementById('DiceHistory');
                     // Reset dice history
                     diceHistory.innerHTML = '';
                     // set dice history on dice roll
                     for (var i = 0; i < 5; i++){
+                       if (!diceLog[i])
+                           continue;
                         
                        diceHistory.insertAdjacentHTML('afterbegin', diceLog[i]);
                         
